@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة المتين الدائم لاستيراد مواد البناء | طرابلس - ليبيا</title>
+    <!-- استدعاء Tailwind CSS للتصميم العصري والمتجاوب -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- استدعاء خط Cairo من Google Fonts لمظهر عربي احترافي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- استدعاء أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#f59e0b', // لون ذهبي/برتقالي يرمز للبناء والعمارة
+                        secondary: '#0f172a', // لون كحلي داكن يرمز للمتانة والقوة
+                        accent: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* خلفية هندسية خفيفة للأقسام */
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)),
+                url('https://images.unsplash.com/photo-1541888946425-d09bb18086f6?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* تأثيرات البطاقات */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- شريط المعلومات العلوي (Top Bar) -->
+    <div class="bg-secondary text-slate-300 text-sm py-2.5 border-b border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6 space-x-reverse">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-amber-500"></i>
+                    <span>طرابلس، ليبيا</span>
+                </span>
+                <span class="hidden sm:flex items-center gap-2">
+                    <i class="fas fa-clock text-amber-500"></i>
+                    <span>السبت - الخميس: 8:00 ص - 6:00 م</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:0917083029"
+                    class="flex items-center gap-2 text-amber-400 font-bold hover:text-amber-300 transition">
+                    <i class="fas fa-phone-alt"></i>
+                    <span dir="ltr">091 708 3029</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- شريط التنقل الرئيسي (Navbar) -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- شعار الشركة -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center text-secondary shadow-lg shadow-amber-500/20 group-hover:scale-105 transition">
+                        <i class="fas fa-building text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-black text-secondary leading-none">المتين الدائم</h1>
+                        <p class="text-xs text-amber-600 font-bold mt-1">لاستيراد مواد البناء</p>
+                    </div>
+                </a>
+
+                <!-- روابط التنقل للشاشات الكبيرة -->
+                <nav class="hidden md:flex items-center space-x-8 space-x-reverse font-semibold text-slate-700">
+                    <a href="#home" class="hover:text-amber-600 transition py-2">الرئيسية</a>
+                    <a href="#about" class="hover:text-amber-600 transition py-2">نبذة عنا</a>
+                    <a href="#vision-goals" class="hover:text-amber-600 transition py-2">رؤيتنا وأهدافنا</a>
+                    <a href="#services" class="hover:text-amber-600 transition py-2">خدماتنا</a>
+                    <a href="#contact" class="hover:text-amber-600 transition py-2">اتصل بنا</a>
+                </nav>
+
+                <!-- زر الاتصال السريع -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:0917083029"
+                        class="bg-secondary hover:bg-slate-800 text-white px-6 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition">
+                        <i class="fas fa-phone-volume text-amber-500"></i>
+                        <span>تواصل معنا</span>
+                    </a>
+                </div>
+
+                <!-- زر القائمة للموبايل -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-secondary p-2 rounded-lg hover:bg-slate-100 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- قائمة الموبايل المنسدلة -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#home"
+                class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">الرئيسية</a>
+            <a href="#about"
+                class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">نبذة
+                عن الشركة</a>
+            <a href="#vision-goals"
+                class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">رؤيتنا
+                وأهدافنا</a>
+            <a href="#services"
+                class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">خدماتنا
+                ومنتجاتنا</a>
+            <a href="#contact"
+                class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">اتصل
+                بنا</a>
+            <div class="pt-2 border-t border-slate-100">
+                <a href="tel:0917083029"
+                    class="w-full bg-amber-500 hover:bg-amber-600 text-secondary font-bold py-3 rounded-xl flex justify-center items-center gap-2 shadow-md">
+                    <i class="fas fa-phone-alt"></i>
+                    <span dir="ltr">091 708 3029</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero Section) -->
+    <section id="home" class="hero-bg relative min-h-[85vh] flex items-center py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div
+                    class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                    <span>الجودة والمتانة أساس البناء في ليبيا</span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                    شركة <span class="text-amber-500">المتين الدائم</span><br>
+                    لاستيراد مواد البناء
+                </h2>
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+                    شريككم الموثوق في طرابلس وليبيا لتوفير أجود مواد البناء والتشييد العالمية بأعلى المعايير والمواصفات
+                    القياسية لبناء مستقبل عمراني راسخ.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services"
+                        class="bg-amber-500 hover:bg-amber-600 text-secondary font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 transition flex items-center gap-3 text-lg">
+                        <span>استكشف خدماتنا</span>
+                        <i class="fas fa-arrow-left text-sm"></i>
+                    </a>
+                    <a href="#contact"
+                        class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-8 py-4 rounded-xl backdrop-blur-sm transition flex items-center gap-3 text-lg">
+                        <i class="fas fa-headset text-amber-400"></i>
+                        <span>تواصل معنا الآن</span>
+                    </a>
+                </div>
+
+                <!-- إحصائيات سريعة -->
+                <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-16 pt-10 border-t border-slate-700/80">
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-black text-amber-500 mb-1">100%</div>
+                        <div class="text-xs sm:text-sm text-slate-300 font-semibold">جودة ومطابقة للمواصفات</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-black text-amber-500 mb-1">+500</div>
+                        <div class="text-xs sm:text-sm text-slate-300 font-semibold">منتج ومادة بناء متوفرة</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-black text-amber-500 mb-1">24/7</div>
+                        <div class="text-xs sm:text-sm text-slate-300 font-semibold">دعم وخدمة عملاء متميزة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم نبذة عن الشركة (About Us) -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- الجانب الأيمن: الصور والتصميم -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
+                            alt="مشاريع ومواد البناء"
+                            onerror="this.src='https://placehold.co/800x600/0f172a/f59e0b?text=المتين+الدائم'"
+                            class="w-full h-[400px] sm:h-[480px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 right-6 left-6 text-white">
+                            <p class="font-bold text-xl">نبني الثقة قبل البنيان</p>
+                            <p class="text-sm text-slate-300 mt-1">مقرنا الرئيسي: طرابلس - ليبيا</p>
+                        </div>
+                    </div>
+                    <!-- عنصر زخرفي خلف الصورة -->
+                    <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-amber-500 rounded-2xl -z-0 hidden sm:block">
+                    </div>
+                    <!-- شارة الخبرة -->
+                    <div
+                        class="absolute -top-6 -left-6 bg-secondary text-white p-6 rounded-2xl shadow-xl z-20 hidden sm:flex items-center gap-4 border border-slate-700">
+                        <div
+                            class="w-14 h-14 bg-amber-500 rounded-xl flex items-center justify-center text-secondary text-2xl font-black">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg font-extrabold text-amber-400">المتين الدائم</div>
+                            <div class="text-xs text-slate-300">اسم يعكس قوة منتجاتنا</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الجانب الأيسر: النص التوضيحي -->
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 text-amber-600 font-bold text-sm bg-amber-50 px-4 py-1.5 rounded-full mb-4">
+                        <i class="fas fa-info-circle"></i>
+                        <span>من نحن</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black text-secondary mb-6 leading-snug">
+                        نبذة عن شركة <span class="text-amber-500">المتين الدائم</span> لاستيراد مواد البناء
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        تُعد <strong>شركة المتين الدائم لاستيراد مواد البناء</strong> ومقرها في العاصمة <strong>طرابلس -
+                            ليبيا</strong>، إحدى الشركات الوطنية الرائدة والمتخصصة في استيراد وتوريد كافة مستلزمات ومواد
+                        البناء والتشييد من أرقى المصانع والشركات العالمية.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        تأسست الشركة لتكون ركيزة أساسية في دعم حركة النهضة العمرانية ومشاريع البنية التحتية في ليبيا.
+                        نحن نؤمن بأن البناء السليم يبدأ من اختيار المواد الأساسية المتينة؛ ولذلك نحرص كل الحرص على
+                        انتقاء منتجات تخضع لأدق معايير الفحص والجودة العالمية، وتلبي تطلعات المقاولين، المهندسين،
+                        والشركات الإنشائية، وكذلك الأفراد الباحثين عن التميز والأمان في بناء مساكنهم.
+                    </p>
+
+                    <!-- ميزات سريعة -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <i class="fas fa-check-circle text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-secondary">مواصفات عالمية</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">استيراد مباشر من أفضل المصانع المعتمدة دولياً.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <i class="fas fa-truck-loading text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-secondary">توريد سريع ومنتظم</h4>
+                                <p class="text-sm text-slate-500 mt-0.5">تغطية شاملة لمشاريع طرابلس وكافة المدن الليبية.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                        <a href="tel:0917083029"
+                            class="bg-secondary hover:bg-slate-800 text-white font-bold px-7 py-3.5 rounded-xl transition flex items-center gap-3 shadow-md">
+                            <i class="fas fa-phone-alt text-amber-500"></i>
+                            <span>اتصل بنا: <span dir="ltr">091 708 3029</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم رؤيتنا وأهدافنا (Vision & Goals) -->
+    <section id="vision-goals" class="py-20 lg:py-28 bg-pattern relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- عنوان القسم -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 text-amber-600 font-bold text-sm bg-amber-100/80 px-4 py-1.5 rounded-full mb-3">
+                    <i class="fas fa-compass"></i>
+                    <span>نهجنا الاستراتيجي</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-secondary mb-4">رؤيتنا وأهداف الشركة</h2>
+                <p class="text-slate-600 text-lg">نسير بخطى ثابتة نحو تطوير قطاع البناء في ليبيا من خلال رؤية واضحة
+                    وأهداف استراتيجية تضع مصلحة العميل وجودة البنيان في المقام الأول.</p>
+            </div>
+
+            <!-- بطاقة الرؤية والرسالة -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+                <!-- رؤيتنا -->
+                <div
+                    class="lg:col-span-5 bg-secondary text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -left-10 -bottom-10 opacity-10 text-9xl">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-amber-500 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg shadow-amber-500/30">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-amber-400 mb-4">رؤيتنا</h3>
+                        <p class="text-slate-200 text-lg leading-relaxed mb-6">
+                            أن نكون الخيار الأول والشريك الاستراتيجي الرائد في مجال استيراد وتوريد مواد البناء في طرابلس
+                            وكافة أنحاء ليبيا، وأن نساهم بفاعلية في النهضة العمرانية من خلال تقديم حلول بناء مبتكرة
+                            ومستدامة تجمع بين المتانة الفائقة والتكلفة المناسبة.
+                        </p>
+                    </div>
+                    <div
+                        class="relative z-10 pt-6 border-t border-slate-700/80 flex items-center gap-3 text-amber-400 font-bold">
+                        <i class="fas fa-award text-xl"></i>
+                        <span>نحو مستقبل عمراني أكثر صلابة وأماناً</span>
+                    </div>
+                </div>
+
+                <!-- أهداف الشركة -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-100">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div
+                            class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl border border-amber-200">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl sm:text-3xl font-black text-secondary">أهداف الشركة</h3>
+                            <p class="text-slate-500 text-sm">المرتكزات التي نعمل على تحقيقها يومياً</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- هدف 1 -->
+                        <div
+                            class="p-5 rounded-2xl bg-slate-50 hover:bg-amber-50/50 border border-slate-100 hover:border-amber-200 transition group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-secondary text-amber-400 flex items-center justify-center font-bold mb-3 group-hover:bg-amber-500 group-hover:text-secondary transition">
+                                1
+                            </div>
+                            <h4 class="font-bold text-secondary text-lg mb-2">تحقيق أعلى معايير الجودة</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">استيراد مواد بناء أصلية ومعتمدة تضمن طول
+                                عمر المباني ومقاومتها لمختلف العوامل المناخية.</p>
+                        </div>
+
+                        <!-- هدف 2 -->
+                        <div
+                            class="p-5 rounded-2xl bg-slate-50 hover:bg-amber-50/50 border border-slate-100 hover:border-amber-200 transition group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-secondary text-amber-400 flex items-center justify-center font-bold mb-3 group-hover:bg-amber-500 group-hover:text-secondary transition">
+                                2
+                            </div>
+                            <h4 class="font-bold text-secondary text-lg mb-2">تلبية احتياجات السوق الليبي</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">توفير تشكيلة شاملة ومتكاملة من مواد البناء
+                                تحت سقف واحد لتسهيل عمليات الشراء والتوريد للمشاريع.</p>
+                        </div>
+
+                        <!-- هدف 3 -->
+                        <div
+                            class="p-5 rounded-2xl bg-slate-50 hover:bg-amber-50/50 border border-slate-100 hover:border-amber-200 transition group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-secondary text-amber-400 flex items-center justify-center font-bold mb-3 group-hover:bg-amber-500 group-hover:text-secondary transition">
+                                3
+                            </div>
+                            <h4 class="font-bold text-secondary text-lg mb-2">أسعار تنافسية وعادلة</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">بناء شراكات مباشرة مع المصانع العالمية
+                                لتقديم أفضل الأسعار لعملائنا في الجملة والتجزئة.</p>
+                        </div>
+
+                        <!-- هدف 4 -->
+                        <div
+                            class="p-5 rounded-2xl bg-slate-50 hover:bg-amber-50/50 border border-slate-100 hover:border-amber-200 transition group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-secondary text-amber-400 flex items-center justify-center font-bold mb-3 group-hover:bg-amber-500 group-hover:text-secondary transition">
+                                4
+                            </div>
+                            <h4 class="font-bold text-secondary text-lg mb-2">الالتزام والمصداقية</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">احترام مواعيد التسليم وبناء علاقات عمل
+                                طويلة الأمد قائمة على الثقة والشفافية مع المقاولين والعملاء.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدماتنا ومنتجاتنا (Our Services) -->
+    <section id="services" class="py-20 lg:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- عنوان القسم -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 text-amber-600 font-bold text-sm bg-amber-50 px-4 py-1.5 rounded-full mb-3">
+                    <i class="fas fa-tools"></i>
+                    <span>ماذا نقدم؟</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-secondary mb-4">خدماتنا ومجالات الاستيراد</h2>
+                <p class="text-slate-600 text-lg">تقدم شركة المتين الدائم منظومة متكاملة من الخدمات في استيراد وتوريد
+                    مواد البناء الأساسية والتشطيبات لتلبية متطلبات المشاريع الصغيرة والكبيرة.</p>
+            </div>
+
+            <!-- شبكة الخدمات -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- خدمة 1 -->
+                <div
+                    class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-amber-400 hover:shadow-xl">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-3">المواد الأساسية والهيكلية</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        استيراد وتوفير حديد التسليح بمختلف المقاسات، الأسمنت عالي الجودة، الأخشاب الإنشائية، وكافة
+                        المواد الأولية اللازمة لوضع الأساسات المتينة.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-semibold border-t border-slate-200/70 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> حديد تسليح مطابق
+                            للمواصفات</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> أسمنت ومواد ربط
+                            عالية الصلابة</li>
+                    </ul>
+                </div>
+
+                <!-- خدمة 2 -->
+                <div
+                    class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-amber-400 hover:shadow-xl">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-3">مواد العزل والكيماويات</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        توفير أحدث أنظمة العزل المائي والحراري لحماية المباني من الرطوبة والحرارة، بالإضافة إلى إضافات
+                        الخرسانة والمواد اللاصقة المتخصصة.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-semibold border-t border-slate-200/70 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> عوازل أسطح
+                            وخزانات المياه</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> مواد معالجة
+                            وتقوية الخرسانة</li>
+                    </ul>
+                </div>
+
+                <!-- خدمة 3 -->
+                <div
+                    class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-amber-400 hover:shadow-xl">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-border-all"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-3">مواد التشطيب والديكور</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        تشكيلة واسعة من السيراميك، البورسلين، الرخام، الجبس بورد، والدهانات العصرية التي تضفي لمسة
+                        جمالية فاخرة وتدوم طويلاً.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-semibold border-t border-slate-200/70 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> سيراميك وبورسلين
+                            نخب أول</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> مستلزمات الأسقف
+                            المعلقة والجبس</li>
+                    </ul>
+                </div>
+
+                <!-- خدمة 4 -->
+                <div
+                    class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-amber-400 hover:shadow-xl">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-3">مستلزمات السباكة والكهرباء</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        استيراد شبكات الأنابيب الصحية، الخزانات، الأطقم الصحية، بالإضافة إلى الكوابل والمعدات الكهربائية
+                        الآمنة والمعتمدة.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-semibold border-t border-slate-200/70 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> أنابيب ووصلات
+                            مقاومة للضغط</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> تجهيزات تأسيس
+                            متكاملة</li>
+                    </ul>
+                </div>
+
+                <!-- خدمة 5 -->
+                <div
+                    class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-amber-400 hover:shadow-xl">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-3">العدد والأدوات والمعدات</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        توفير كافة الأدوات اليدوية والكهربائية ومعدات الورش والسلامة المهنية التي يحتاجها المهندسون
+                        والعمال في مواقع البناء.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-semibold border-t border-slate-200/70 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> معدات يدوية
+                            وكهربائية احترافية</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> أدوات الأمن
+                            والسلامة للمواقع</li>
+                    </ul>
+                </div>
+
+                <!-- خدمة 6 -->
+                <div
+                    class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-amber-400 hover:shadow-xl">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-3">التوريد للمشاريع والمقاولين</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        خدمات لوجستية متكاملة لتوريد الطلبيات الخاصة والكبيرة للشركات الإنشائية والمقاولين مباشرة إلى
+                        مواقع العمل في طرابلس وخارجها.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-semibold border-t border-slate-200/70 pt-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> عقود توريد مرنة
+                            للمشاريع</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500"></i> أسعار خاصة لتجار
+                            الجملة</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- شريط دعوة للتواصل (Call to Action) -->
+    <section
+        class="py-16 bg-gradient-to-r from-secondary via-slate-900 to-secondary text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="bg-amber-500 rounded-3xl p-8 sm:p-12 text-secondary shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="max-w-2xl text-center lg:text-right">
+                    <h3 class="text-2xl sm:text-3xl font-black mb-3">هل لديك مشروع بناء وتبحث عن أفضل المواد والأسعار؟
+                    </h3>
+                    <p class="text-slate-900 font-semibold text-lg">فريق شركة المتين الدائم جاهز لتلبية كافة طلباتكم
+                        وتقديم عروض أسعار تنافسية لمشاريعكم في طرابلس وكافة المدن الليبية.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+                    <a href="tel:0917083029"
+                        class="bg-secondary hover:bg-slate-800 text-white font-extrabold px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-3 text-lg">
+                        <i class="fas fa-phone-alt text-amber-400"></i>
+                        <span dir="ltr">091 708 3029</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا (Contact Us) -->
+    <section id="contact" class="py-20 lg:py-28 bg-slate-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 text-amber-600 font-bold text-sm bg-amber-100/80 px-4 py-1.5 rounded-full mb-3">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>نحن قريبون منك</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-secondary mb-4">تواصل معنا</h2>
+                <p class="text-slate-600 text-lg">يسعدنا استقبال استفساراتكم وطلبات عروض الأسعار عبر الهاتف أو زيارتنا
+                    في مقر الشركة بطرابلس.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <!-- معلومات الاتصال -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- بطاقة الهاتف -->
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-amber-400 transition">
+                        <div
+                            class="w-14 h-14 bg-amber-500 text-secondary rounded-2xl flex items-center justify-center text-2xl shrink-0 shadow-md">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-extrabold text-secondary mb-1">رقم الهاتف المباشر</h4>
+                            <p class="text-slate-500 text-sm mb-2">متاحون للرد على استفساراتكم وطلباتكم</p>
+                            <a href="tel:0917083029"
+                                class="text-xl font-black text-amber-600 hover:text-amber-700 transition inline-block"
+                                dir="ltr">091 708 3029</a>
+                        </div>
+                    </div>
+
+                    <!-- بطاقة العنوان -->
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-amber-400 transition">
+                        <div
+                            class="w-14 h-14 bg-secondary text-amber-400 rounded-2xl flex items-center justify-center text-2xl shrink-0 shadow-md">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-extrabold text-secondary mb-1">موقع الشركة</h4>
+                            <p class="text-slate-500 text-sm mb-2">تفضلوا بزيارتنا في مقرنا الرئيسي</p>
+                            <p class="text-lg font-bold text-slate-800">طرابلس، ليبيا</p>
+                        </div>
+                    </div>
+
+                    <!-- بطاقة ساعات العمل -->
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-5 hover:border-amber-400 transition">
+                        <div
+                            class="w-14 h-14 bg-slate-100 text-secondary rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-extrabold text-secondary mb-1">ساعات العمل</h4>
+                            <p class="text-slate-600 text-sm">السبت إلى الخميس: 8:00 صباحاً - 6:00 مساءً</p>
+                            <p class="text-amber-600 text-sm font-semibold mt-1">الجمعة: عطلة رسمية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج مراسلة تفاعلي -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-slate-100">
+                    <h3 class="text-2xl font-black text-secondary mb-2">أرسل لنا طلبك أو استفسارك</h3>
+                    <p class="text-slate-500 text-sm mb-6">املأ النموذج أدناه وسنقوم بالتواصل معك في أقرب وقت ممكن.</p>
+
+
+
+                    <!-- رسالة تأكيد الإرسال (مخفية افتراضياً) -->
+                    <div id="form-success"
+                        class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl flex items-center gap-3">
+                        <i class="fas fa-check-circle text-2xl text-emerald-600"></i>
+                        <div>
+                            <h5 class="font-bold">تم استلام رسالتك بنجاح!</h5>
+                            <p class="text-sm">شكراً لتواصلك مع شركة المتين الدائم. سنتصل بك قريباً، أو يمكنك الاتصال
+                                بنا مباشرة على الرقم <strong dir="ltr">0917083029</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل (Footer) -->
+    <footer class="bg-secondary text-slate-400 pt-16 pb-8 border-t-4 border-amber-500">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- معلومات الشركة -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center text-secondary">
+                            <i class="fas fa-building text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">شركة المتين الدائم</h3>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6 max-w-md">
+                        لاستيراد مواد البناء والتشييد. نعمل في طرابلس وعموم ليبيا على توفير أجود المواد الإنشائية ومواد
+                        التشطيب العالمية التي تضمن لكم بناءً متيناً يدوم لأجيال.
+                    </p>
+                    <div class="flex items-center gap-3 text-white font-bold">
+                        <span class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-amber-500"><i
+                                class="fas fa-phone-alt"></i></span>
+                        <a href="tel:0917083029" dir="ltr" class="hover:text-amber-400 transition">091 708 3029</a>
+                    </div>
+                </div>
+
+                <!-- روابط سريعة -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4 border-r-4 border-amber-500 pr-3">روابط سريعة</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#home" class="hover:text-amber-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-left text-xs text-amber-500"></i> الرئيسية</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-left text-xs text-amber-500"></i> نبذة عن الشركة</a></li>
+                        <li><a href="#vision-goals" class="hover:text-amber-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-left text-xs text-amber-500"></i> رؤيتنا وأهدافنا</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-left text-xs text-amber-500"></i> خدماتنا ومنتجاتنا</a></li>
+                        <li><a href="#contact" class="hover:text-amber-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-left text-xs text-amber-500"></i> تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- تواصل معنا -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4 border-r-4 border-amber-500 pr-3">معلومات التواصل</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-amber-500 mt-1"></i>
+                            <span>المقر الرئيسي: طرابلس، ليبيا</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone-alt text-amber-500 mt-1"></i>
+                            <span dir="ltr">091 708 3029</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-amber-500 mt-1"></i>
+                            <span>استيراد وتوريد بالجملة والتجزئة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- حقوق النشر -->
+            <div
+                class="pt-8 border-t border-slate-800 text-center text-sm flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>© جميع الحقوق محفوظة لصالح <span class="text-white font-bold">شركة المتين الدائم لاستيراد مواد
+                        البناء</span>.</p>
+                <p class="text-slate-500">طرابلس - ليبيا</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- أكواد JavaScript للتفاعلية (قائمة الموبايل ونموذج الاتصال) -->
+    <script>
+        // التحكم في قائمة الموبايل
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // إغلاق قائمة الموبايل عند النقر على أي رابط
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // معالجة نموذج الاتصال
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.reset();
+            formSuccess.classList.remove('hidden');
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 7000);
+        });
+    </script>
+</body>
+
+</html>

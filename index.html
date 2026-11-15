@@ -631,22 +631,20 @@
                     </div>
                 </div>
 
-                <!-- نموذج مراسلة تفاعلي -->
-                <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-slate-100">
-                    <h3 class="text-2xl font-black text-secondary mb-2">أرسل لنا طلبك أو استفسارك</h3>
-                    <p class="text-slate-500 text-sm mb-6">املأ النموذج أدناه وسنقوم بالتواصل معك في أقرب وقت ممكن.</p>
-
-
-
-                    <!-- رسالة تأكيد الإرسال (مخفية افتراضياً) -->
-                    <div id="form-success"
-                        class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl flex items-center gap-3">
-                        <i class="fas fa-check-circle text-2xl text-emerald-600"></i>
-                        <div>
-                            <h5 class="font-bold">تم استلام رسالتك بنجاح!</h5>
-                            <p class="text-sm">شكراً لتواصلك مع شركة المتين الدائم. سنتصل بك قريباً، أو يمكنك الاتصال
-                                بنا مباشرة على الرقم <strong dir="ltr">0917083029</strong>.</p>
-                        </div>
+                <!-- الخريطة التفاعلية لموقع الشركة -->
+                <div
+                    class="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-6 shadow-lg border border-slate-100 flex flex-col">
+                    <div class="mb-4 px-2">
+                        <h3 class="text-2xl font-black text-secondary mb-1">موقعنا على الخريطة</h3>
+                        <p class="text-slate-500 text-sm">يمكنكم الوصول إلينا بسهولة عبر خرائط جوجل</p>
+                    </div>
+                    <div
+                        class="w-full h-[350px] sm:h-[420px] rounded-2xl overflow-hidden border border-slate-200 flex-grow">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3194.252604889095!2d13.298568684815795!3d32.86253738094612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDUxJzQ1LjEiTiAxM8KwMTcnNDcuMCJF!5e1!3m2!1sar!2sly!4v1794744441835!5m2!1sar!2sly"
+                            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -723,7 +721,7 @@
         </div>
     </footer>
 
-    <!-- أكواد JavaScript للتفاعلية (قائمة الموبايل ونموذج الاتصال) -->
+    <!-- أكواد JavaScript للتفاعلية (قائمة الموبايل) -->
     <script>
         // التحكم في قائمة الموبايل
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -739,19 +737,6 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
-        });
-
-        // معالجة نموذج الاتصال
-        const contactForm = document.getElementById('contact-form');
-        const formSuccess = document.getElementById('form-success');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            contactForm.reset();
-            formSuccess.classList.remove('hidden');
-            setTimeout(() => {
-                formSuccess.classList.add('hidden');
-            }, 7000);
         });
     </script>
 </body>

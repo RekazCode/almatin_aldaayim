@@ -110,6 +110,7 @@
                     <a href="#about" class="hover:text-amber-600 transition py-2">نبذة عنا</a>
                     <a href="#vision-goals" class="hover:text-amber-600 transition py-2">رؤيتنا وأهدافنا</a>
                     <a href="#services" class="hover:text-amber-600 transition py-2">خدماتنا</a>
+                    <a href="#gallery" class="hover:text-amber-600 transition py-2">معرض الصور</a>
                     <a href="#contact" class="hover:text-amber-600 transition py-2">اتصل بنا</a>
                 </nav>
 
@@ -144,6 +145,9 @@
             <a href="#services"
                 class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">خدماتنا
                 ومنتجاتنا</a>
+            <a href="#gallery"
+                class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">معرض
+                الصور</a>
             <a href="#contact"
                 class="block px-4 py-2.5 rounded-lg text-slate-700 font-semibold hover:bg-amber-50 hover:text-amber-600 transition mobile-link">اتصل
                 بنا</a>
@@ -546,6 +550,145 @@
         </div>
     </section>
 
+    <!-- قسم معرض الصور (Photo Gallery) -->
+    <section id="gallery" class="py-20 lg:py-28 bg-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- عنوان القسم -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 text-amber-600 font-bold text-sm bg-amber-100/80 px-4 py-1.5 rounded-full mb-3">
+                    <i class="fas fa-images"></i>
+                    <span>جولة مصورة</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-secondary mb-4">معرض الصور</h2>
+                <p class="text-slate-600 text-lg">جانب من منتجاتنا ومواد البناء المتوفرة في مخازن ومعارض شركة المتين
+                    الدائم.</p>
+            </div>
+
+            <!-- شبكة الصور (7 صور) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- صورة 1 (تمتد لعمودين في الشاشات الكبيرة ليتناسق العدد 7 في الشبكة) -->
+                <div class="lg:col-span-2 group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(1).jpeg')">
+                    <img src="(1).jpeg" alt="معرض صور شركة المتين الدائم 1"
+                        onerror="this.src='https://placehold.co/800x600/0f172a/f59e0b?text=(1).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة 2 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(2).jpeg')">
+                    <img src="(2).jpeg" alt="معرض صور شركة المتين الدائم 2"
+                        onerror="this.src='https://placehold.co/600x600/0f172a/f59e0b?text=(2).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة 3 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(3).jpeg')">
+                    <img src="(3).jpeg" alt="معرض صور شركة المتين الدائم 3"
+                        onerror="this.src='https://placehold.co/600x600/0f172a/f59e0b?text=(3).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة 4 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(4).jpeg')">
+                    <img src="(4).jpeg" alt="معرض صور شركة المتين الدائم 4"
+                        onerror="this.src='https://placehold.co/600x600/0f172a/f59e0b?text=(4).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة 5 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(5).jpeg')">
+                    <img src="(5).jpeg" alt="معرض صور شركة المتين الدائم 5"
+                        onerror="this.src='https://placehold.co/600x600/0f172a/f59e0b?text=(5).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة 6 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(6).jpeg')">
+                    <img src="(6).jpeg" alt="معرض صور شركة المتين الدائم 6"
+                        onerror="this.src='https://placehold.co/600x600/0f172a/f59e0b?text=(6).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة 7 -->
+                <div class="sm:col-span-2 lg:col-span-2 group relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white cursor-pointer"
+                    onclick="openLightbox('(7).jpeg')">
+                    <img src="(7).jpeg" alt="معرض صور شركة المتين الدائم 7"
+                        onerror="this.src='https://placehold.co/800x600/0f172a/f59e0b?text=(7).jpeg'"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white flex items-center gap-2 font-bold">
+                            <i class="fas fa-search-plus text-amber-400 text-xl"></i>
+                            <span>تكبير الصورة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة عرض الصور المكبرة (Lightbox Modal) -->
+    <div id="lightbox"
+        class="fixed inset-0 z-50 hidden bg-secondary/90 backdrop-blur-sm flex items-center justify-center p-4"
+        onclick="closeLightbox()">
+        <button
+            class="absolute top-6 left-6 w-12 h-12 rounded-full bg-white/10 hover:bg-amber-500 text-white hover:text-secondary flex items-center justify-center text-2xl transition"
+            onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="صورة مكبرة"
+            class="max-w-full max-h-[85vh] rounded-2xl shadow-2xl border-2 border-white/20 object-contain"
+            onclick="event.stopPropagation()">
+    </div>
+
     <!-- شريط دعوة للتواصل (Call to Action) -->
     <section
         class="py-16 bg-gradient-to-r from-secondary via-slate-900 to-secondary text-white relative overflow-hidden">
@@ -686,6 +829,8 @@
                                     class="fas fa-angle-left text-xs text-amber-500"></i> رؤيتنا وأهدافنا</a></li>
                         <li><a href="#services" class="hover:text-amber-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-left text-xs text-amber-500"></i> خدماتنا ومنتجاتنا</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-left text-xs text-amber-500"></i> معرض الصور</a></li>
                         <li><a href="#contact" class="hover:text-amber-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-left text-xs text-amber-500"></i> تواصل معنا</a></li>
                     </ul>
@@ -737,6 +882,24 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // التحكم في نافذة تكبير الصور (Lightbox)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
         });
     </script>
 </body>
